@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-working Space Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Co-working Space Booking System</h1>
+    </header>
+    <main>
+        <section id="desks">
+            <h2>Available Desks</h2>
+            <div id="individual-desks">
+                <h3>Individual Desks</h3>
+                <!-- Individual desks will be dynamically generated here -->
+            </div>
+            <div id="team-desks">
+                <h3>Team Desks</h3>
+                <!-- Team desks will be dynamically generated here -->
+            </div>
+        </section>
+        <section id="booking-form">
+            <h2>Book a Desk</h2>
+            <form id="form">
+                <label for="desk-type">Desk Type:</label>
+                <select id="desk-type" required>
+                    <option value="individual">Individual</option>
+                    <option value="team">Team</option>
+                </select>
+                <label for="membership-tier">Membership Tier:</label>
+                <select id="membership-tier">
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="executive">Executive</option>
+                </select>
+                <label for="hours">Hours:</label>
+                <input type="number" id="hours" min="1" required>
+                <button type="submit">Book Now</button>
+            </form>
+            <p id="total-charge"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Total Revenue: $<span id="total-revenue">0</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
