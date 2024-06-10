@@ -27,39 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  renderDesks();
-});
-
-// handle booking
-document.addEventListener("DOMContentLoaded", () => {
-  const individualDesks = 10;
-  const teamDesks = 5;
-  const desks = {
-    individual: Array(individualDesks).fill(false),
-    team: Array(teamDesks).fill(false),
-  };
-
-  const renderDesks = () => {
-    const individualDeskContainer = document.getElementById("individual-desks");
-    const teamDeskContainer = document.getElementById("team-desks");
-    individualDeskContainer.innerHTML = "";
-    teamDeskContainer.innerHTML = "";
-
-    desks.individual.forEach((booked, index) => {
-      const desk = document.createElement("div");
-      desk.className = `desk ${booked ? "booked" : ""}`;
-      desk.textContent = `Desk ${index + 1}`;
-      individualDeskContainer.appendChild(desk);
-    });
-
-    desks.team.forEach((booked, index) => {
-      const desk = document.createElement("div");
-      desk.className = `desk ${booked ? "booked" : ""}`;
-      desk.textContent = `Desk ${index + 1}`;
-      teamDeskContainer.appendChild(desk);
-    });
-  };
-
   const form = document.getElementById("form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();

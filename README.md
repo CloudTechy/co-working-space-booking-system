@@ -24,7 +24,7 @@ This project is a co-working space booking system that allows users to book desk
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/CloudTechy/co-working-space-booking-system.git
    ```
 2. Open index.html in a browser to run the application locally.
 
